@@ -144,7 +144,7 @@ async function run() {
       const tool1 = await toolsCollection.updateOne(query, updateDoc);
       const tool2 = await toolsCollection.findOne(query);
       console.log('tools2', tool2);
-      //const result = await purchaseCollection.updateOne(query, updateDoc);
+
       //console.log("result",result);
       res.send(tool2);
     });
