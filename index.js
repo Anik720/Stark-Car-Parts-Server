@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-// (process.env.STRIPE_SECRET_KEY)
+
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -135,7 +135,6 @@ async function run() {
       const query = { _id: ObjectId(id) };
 
       const tool = await toolsCollection.findOne(query);
-      //console.log(tool);
 
       const updateDoc = {
         $set: {
