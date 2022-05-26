@@ -145,7 +145,6 @@ async function run() {
       const tool2 = await toolsCollection.findOne(query);
       console.log('tools2', tool2);
 
-      //console.log("result",result);
       res.send(tool2);
     });
 
