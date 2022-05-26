@@ -211,7 +211,6 @@ async function run() {
         description: tool.description,
       };
 
-      //const totalPrice=price*quantity
       console.log('hello', tool);
       const result = await purchaseCollection.insertOne(updateDoc);
       const ress = await purchaseCollection.findOne(query);
